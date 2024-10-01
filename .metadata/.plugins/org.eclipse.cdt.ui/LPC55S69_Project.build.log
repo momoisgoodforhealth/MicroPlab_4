@@ -1,0 +1,19 @@
+10:13:43 **** Incremental Build of configuration Debug for project LPC55S69_Project ****
+make -r -j8 all 
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DSDK_OS_BAREMETAL -DSERIAL_PORT_TYPE_UART=1 -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\board" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\source" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\utilities" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\drivers" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\component\uart" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\component\serial_manager" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\device" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\CMSIS" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\component\lists" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\LPC55S69_Project\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+../board/pin_mux.c: In function 'BOARD_InitPins':
+../board/pin_mux.c:846:5: warning: implicit declaration of function 'INPUTMUX_AttachSignal' [-Wimplicit-function-declaration]
+  846 |     INPUTMUX_AttachSignal(INPUTMUX, 0U, kINPUTMUX_GpioPort1Pin9ToPintsel);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+../board/pin_mux.c:846:41: error: 'kINPUTMUX_GpioPort1Pin9ToPintsel' undeclared (first use in this function)
+  846 |     INPUTMUX_AttachSignal(INPUTMUX, 0U, kINPUTMUX_GpioPort1Pin9ToPintsel);
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../board/pin_mux.c:846:41: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [board/subdir.mk:29: board/pin_mux.o] Error 1
+make: *** [makefile:43: all] Error 2
+"make -r -j8 all" terminated with exit code 2. Build might be incomplete.
+
+10:13:44 Build Failed. 3 errors, 1 warnings. (took 670ms)
+

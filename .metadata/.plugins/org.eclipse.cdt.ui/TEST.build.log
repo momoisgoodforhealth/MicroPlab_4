@@ -1,0 +1,34 @@
+10:32:11 **** Incremental Build of configuration Debug for project TEST ****
+make -r -j8 all 
+Building file: ../source/TEST.c
+Building file: ../board/pin_mux.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DSERIAL_PORT_TYPE_UART=1 -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\board" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\source" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\utilities" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\drivers" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\component\uart" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\component\serial_manager" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\device" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\CMSIS" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\component\lists" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/TEST.d" -MT"source/TEST.o" -MT"source/TEST.d" -o "source/TEST.o" "../source/TEST.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DCPU_LPC55S69JBD100 -DCPU_LPC55S69JBD100_cm33 -DCPU_LPC55S69JBD100_cm33_core0 -DSERIAL_PORT_TYPE_UART=1 -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=0 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__REDLIB__ -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\board" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\source" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\utilities" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\drivers" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\component\uart" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\component\serial_manager" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\device" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\CMSIS" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\component\lists" -I"C:\Users\shoba\Documents\MCUXpressoIDE_11.10.0_3148\workspace\TEST\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="../board/"= -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"board/pin_mux.d" -MT"board/pin_mux.o" -MT"board/pin_mux.d" -o "board/pin_mux.o" "../board/pin_mux.c"
+../board/pin_mux.c:23:10: fatal error: fsl_inputmux.h: No such file or directory
+   23 | #include "fsl_inputmux.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [board/subdir.mk:29: board/pin_mux.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+../source/TEST.c: In function 'cbPint':
+../source/TEST.c:43:16: warning: multi-character character constant [-Wmultichar]
+   43 |         PRINTF('%d',pintr);
+      |                ^~~~
+../source/TEST.c:43:16: warning: passing argument 1 of '_printf' makes pointer from integer without a cast [-Wint-conversion]
+   43 |         PRINTF('%d',pintr);
+      |                ^~~~
+      |                |
+      |                int
+In file included from ../source/TEST.c:12:
+C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/redlib/include/stdio.h:200:32: note: expected 'const char *' but argument is of type 'int'
+  200 | extern int _printf(const char *fmt, ...);
+      |                    ~~~~~~~~~~~~^~~
+Finished building: ../source/TEST.c
+ 
+make: *** [makefile:43: all] Error 2
+"make -r -j8 all" terminated with exit code 2. Build might be incomplete.
+
+10:32:12 Build Failed. 4 errors, 2 warnings. (took 646ms)
+
